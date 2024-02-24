@@ -1,0 +1,8 @@
+set spelllang=el,en
+set spell
+set laststatus=2
+set nocompatible
+syntax spell toplevel
+colorscheme habamax
+nnoremap <C-s> :w<CR>
+set viminfo+=n~/.vim/viminfo

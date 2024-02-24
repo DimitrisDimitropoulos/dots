@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = DimitrisDimitropoulos
+	email = dimitris.dimitropoulos00@gmail.com
+[core]
+	editor = nvim
+[init]
+  defaultBranch = main
+[status]
+  short = true

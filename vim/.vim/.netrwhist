@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/dimitris/.config/nvim/after'
+let g:netrw_dirhist_3='/home/dimitris/.config/nvim'
+let g:netrw_dirhist_2='/home/dimitris/.config/nvim/lua'
+let g:netrw_dirhist_1='/home/dimitris/.config/nvim'
+let g:netrw_dirhist_0='/home/dimitris'
+let g:netrw_dirhist_9='/home/dimitris/Documents/textest/XeLaTeX'
+let g:netrw_dirhist_8='/home/dimitris/Documents/textest'
+let g:netrw_dirhist_7='/home/dimitris/Documents'
+let g:netrw_dirhist_6='/home/dimitris'
+let g:netrw_dirhist_5='/home/dimitris/.config/nvim/snippets/json_snippets'
