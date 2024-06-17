@@ -31,7 +31,7 @@ end
 function fish_prompt
   echo (date '+%T') (pretty_path) (get_branch)
   set_color -io magenta
-  echo "λ: "
+  echo "λ:"
 end
 
 set -x XDG_CACHE_HOME $HOME/.cache
