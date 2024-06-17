@@ -7,6 +7,7 @@ polybar &
 setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'
 setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gr
+xsetroot -cursor_name crosshair &
 
 bspc subscribe monitor | while read -r line; do
 	case $line in
