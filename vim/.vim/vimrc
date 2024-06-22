@@ -1,7 +1,29 @@
+let leader=" "
 set spelllang=el,en
 set spell
 set laststatus=2
+set smartindent
+set smartcase
+set scrolloff=3
+set sidescrolloff=3
+set cursorline
+set nonumber
+set relativenumber
+set splitbelow
+set splitright
+set numberwidth=2
+set termguicolors
+set timeout
+set timeoutlen=400
 set nocompatible
+set linebreak
+set pumheight=10
+set expandtab
+set shiftwidth=2
+set listchars
+set clipboard=unnamedplus
+set softtabstop=2
+set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,ΡR,ΣS,ΤT,ΘU,ΩV,WW,ΧX,ΥY,ΖZ,αa,βb,ψc,δd,εe,φf,γg,ηh,ιi,ξj,κk,λl,μm,νn,οo,πp,qq,ρr,σs,τt,θu,ωv,ςw,χx,υy,ζz
 syntax spell toplevel
 colorscheme habamax
 nnoremap <C-s> :w<CR>
