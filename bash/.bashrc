@@ -9,7 +9,7 @@ function git_branch_name() {
 		echo "($branch)"
 	fi
 }
-PS1='\t \[\e[3;33m\]\w\[\e[0m\] \[\e[36m\]$(git_branch_name)\[\e[0m\] \n\[\e[1;35m\]λ\[\e[0m\] '
+PS1='\t \[\e[3;33m\]\w\[\e[0m\] \[\e[36m\]$(git_branch_name)\[\e[0m\] \n\[\e[1;35m\]λ:\[\e[0m\]'
 
 alias vi=nvim
 
@@ -39,6 +39,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 ### Editor variables
 export EDITOR="nvim"
 export VISUAL="nvim"
+export SHELL="/bin/fish"
 export SUDO_EDITOR="vim"
 ### Terminal 
 export TERMINAL="st"
