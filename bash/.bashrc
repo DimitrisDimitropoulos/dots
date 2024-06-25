@@ -37,17 +37,29 @@ export DENO_INSTALL="/home/dimitris/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ### Editor variables
-export EDITOR="nvim"
-export VISUAL="nvim"
-export SHELL="/bin/fish"
-export SUDO_EDITOR="vim"
-### Terminal 
+if command -v nvim &>/dev/null; then
+	export EDITOR="nvim"
+	export VISUAL="nvim"
+	export SUDO_EDITOR="nvim"
+else
+	export EDITOR="vim"
+	export VISUAL="vim"
+	export SUDO_EDITOR="vim"
+fi
+### Terminal
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 ### Browser
 export BROWSER="firefox"
 ### FZF variables
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+
+### Set SHELL to fish
+if command -v fish &>/dev/null; then
+	export SHELL="/bin/fish"
+else
+	echo "Fish shell not found"
+fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

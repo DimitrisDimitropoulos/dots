@@ -56,9 +56,16 @@ set -x PATH $HOME/.local/share/bob/nvim-bin $PATH
 set -x DENO_INSTALL $HOME/.deno
 set -x PATH $DENO_INSTALL/bin $PATH
 
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
-set -x SUDO_EDITOR "vim"
+if type -q nvim &> /dev/null
+  set -x EDITOR "nvim"
+  set -x VISUAL "nvim"
+  set -x SUDO_EDITOR "nvim"
+else
+  set -x EDITOR "vim"
+  set -x VISUAL "vim"
+  set -x SUDO_EDITOR "vim"
+end
+
 set -x TERMINAL "st"
 set -x TERMINAL_PROG "st"
 set -x BROWSER "firefox"
