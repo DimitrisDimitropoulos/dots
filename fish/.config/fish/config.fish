@@ -69,6 +69,10 @@ end
 set -x TERMINAL "st"
 set -x TERMINAL_PROG "st"
 set -x BROWSER "firefox"
-set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
+set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --no-ignore --follow --exclude='**/.git/'"
+set -gx FZF_DEFAULT_OPTS '--height 80% --min-height=30 --layout=reverse
+--preview \'bat --style=numbers --color=always --line-range :500 {}\'
+--bind=ctrl-u:preview-half-page-up 
+--bind=ctrl-d:preview-half-page-down'
 
 zoxide init fish | source
