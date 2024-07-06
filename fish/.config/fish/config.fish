@@ -1,37 +1,37 @@
 if status is-interactive
-  bind \cH backward-kill-word
-  abbr -a vi nvim
-  abbr -a vi-swap "cd $HOME/.local/state/nvim/swap/"
+    bind \cH backward-kill-word
+    abbr -a vi nvim
+    abbr -a vi-swap "cd $HOME/.local/state/nvim/swap/"
 end
 
 set fish_greeting
 
 function pretty_path
-  set_color normal;
-  set_color -i yellow;
-  echo (pwd | sed "s|^$HOME|~|g")
+    set_color normal
+    set_color -i yellow
+    echo (pwd | sed "s|^$HOME|~|g")
 end
 
 function get_branch
-  set_color normal;
-  set_color grey;
-  if test (git status --untracked-files=no --porcelain 2> /dev/null | wc -l) -eq 0
-    set indicator ""
-  else
-    set indicator "*"
-  end
-  set branch_name (git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if test "$branch_name" != ""
-    echo "($branch_name$indicator)"
-  else
-    echo ""
-  end
+    set_color normal
+    set_color grey
+    if test (git status --untracked-files=no --porcelain 2> /dev/null | wc -l) -eq 0
+        set indicator ""
+    else
+        set indicator "*"
+    end
+    set branch_name (git rev-parse --abbrev-ref HEAD 2> /dev/null)
+    if test "$branch_name" != ""
+        echo "($branch_name$indicator)"
+    else
+        echo ""
+    end
 end
 
 function fish_prompt
-  echo (date '+%T') (pretty_path) (get_branch)
-  set_color -io magenta
-  echo "λ:"
+    echo (date '+%T') (pretty_path) (get_branch)
+    set_color -io magenta
+    echo "λ:"
 end
 
 set -x XDG_CACHE_HOME $HOME/.cache
@@ -56,19 +56,19 @@ set -x PATH $HOME/.local/share/bob/nvim-bin $PATH
 set -x DENO_INSTALL $HOME/.deno
 set -x PATH $DENO_INSTALL/bin $PATH
 
-if type -q nvim &> /dev/null
-  set -x EDITOR "nvim"
-  set -x VISUAL "nvim"
-  set -x SUDO_EDITOR "nvim"
+if type -q nvim &>/dev/null
+    set -x EDITOR nvim
+    set -x VISUAL nvim
+    set -x SUDO_EDITOR nvim
 else
-  set -x EDITOR "vim"
-  set -x VISUAL "vim"
-  set -x SUDO_EDITOR "vim"
+    set -x EDITOR vim
+    set -x VISUAL vim
+    set -x SUDO_EDITOR vim
 end
 
-set -x TERMINAL "st"
-set -x TERMINAL_PROG "st"
-set -x BROWSER "firefox"
+set -x TERMINAL st
+set -x TERMINAL_PROG st
+set -x BROWSER firefox
 set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --no-ignore --follow --exclude='**/.git/'"
 set -gx FZF_DEFAULT_OPTS '--height 80% --min-height=30 --layout=reverse
 --preview \'bat --style=numbers --color=always --line-range :500 {}\'
