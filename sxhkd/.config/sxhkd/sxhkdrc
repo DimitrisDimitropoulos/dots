@@ -14,7 +14,7 @@ super + w
   firefox
 #launch vs  code
 super + c
-  flatpak run com.visualstudio.code.insiders
+  flatpak run com.visualstudio.code
 # Open/close dashboard
 alt + space
   rofi -show drun
@@ -28,8 +28,8 @@ XF86AudioRaiseVolume
   exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 #mute control
 XF86AudioMicMute
-# Brightness control
   amixer set Capture toggle
+# Brightness control
 XF86MonBrightnessUp
   exec brightnessctl set +5%
 XF86MonBrightnessDown
