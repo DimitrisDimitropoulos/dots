@@ -72,8 +72,10 @@ set -x BROWSER firefox
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
 set -gx FZF_DEFAULT_OPTS '--height 80% --min-height=30 --layout=reverse
 --preview \'bat --style=numbers --color=always --line-range :500 {}\'
---bind=alt-u:preview-half-page-up 
+--bind=alt-k:first
+--bind=alt-j:last
 --bind=alt-h:toggle-preview
+--bind=alt-u:preview-half-page-up 
 --bind=alt-d:preview-half-page-down'
 
 zoxide init fish | source
