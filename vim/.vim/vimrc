@@ -26,4 +26,5 @@ set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,�
 syntax spell toplevel
 colorscheme habamax
 nnoremap <C-s> :w<CR>
+nnoremap <leader>ff <cmd>FZF<CR>
 set viminfo+=n~/.vim/viminfo
