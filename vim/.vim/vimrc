@@ -1,4 +1,4 @@
-let leader=" "
+let mapleader = " "
 set spelllang=el,en
 set spell
 set laststatus=2
