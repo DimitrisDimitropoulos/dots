@@ -103,3 +103,7 @@ super + alt + {Left,Right,Up,Down}
 ## Move floating windows
 super + shift + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Take screenshot with scrot with super + shift + s
+super + m
+  scrot -s "/home/$(whoami)/Pictures/Screenshots/%Y-%m-%d-%T.png"
