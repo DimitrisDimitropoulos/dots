@@ -70,7 +70,8 @@ set -x TERMINAL st
 set -x TERMINAL_PROG st
 set -x BROWSER firefox
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
-set -gx FZF_DEFAULT_OPTS '--height 80% --min-height=30 --layout=reverse
+set -gx FZF_DEFAULT_OPTS '--min-height=30 --layout=reverse --cycle --info=inline --no-scrollbar
+--preview-window \'right,50%,border-left,<50(down,40%,border-top)\'
 --preview \'bat --style=numbers --color=always --line-range :500 {}\'
 --bind=alt-k:first
 --bind=alt-j:last
