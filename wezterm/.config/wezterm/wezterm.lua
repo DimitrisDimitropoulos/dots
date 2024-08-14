@@ -25,16 +25,13 @@ return {
 	force_reverse_video_cursor = true,
 	hide_mouse_cursor_when_typing = false,
 	colors = {
-		foreground = "#dcd7ba",
+		foreground = "#ffffff",
 		background = "#121111",
-		cursor_bg = "#c8c093",
-		cursor_fg = "#c8c093",
-		cursor_border = "#c8c093",
-
-		selection_fg = "#c8c093",
+		cursor_bg = "#ffffff",
+		cursor_fg = "#ffffff",
+		cursor_border = "#ffffff",
+		selection_fg = "#ffffff",
 		selection_bg = "#2d4f67",
-
-		scrollbar_thumb = "#16161d",
 		split = "#36363d",
 
 		ansi = {
