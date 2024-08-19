@@ -2,13 +2,13 @@
 
 #launch terminal
 super + Return
-  st
+  kitty
 #launch terminal as float
 super + {_,shift +}Return
   {st, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=720x360+600+26 && st}
 
 super + z
-  alacritty
+  st
 #your prefered browser
 super + w
   firefox
