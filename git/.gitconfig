@@ -1,7 +1,9 @@
 # This is Git's per-user configuration file.
 [user]
-	name = DimitrisDimitropoulos
+	name = Dimitris Dimitropoulos
+  username = DimitrisDimitropoulos
 	email = dimitris.dimitropoulos00@gmail.com
+	signingkey = 3CE5D49729AF16A4
 [core]
 	editor = nvim
 [init]
@@ -17,3 +19,5 @@
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+[commit]
+	gpgsign = true
