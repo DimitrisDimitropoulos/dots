@@ -1,0 +1,57 @@
+[[language]]
+name = "latex"
+language-servers = ["texlab"]
+text-width = 80
+soft-wrap = { enable = true, wrap-at-text-width = true }
+auto-format = true
+
+[language-server.texlab]
+config.texlab.build.auxDirectory = "build"
+config.texlab.build.logDirectory = "build"
+config.texlab.build.pdfDirectory = "build"
+config.texlab.build.onSave = true
+config.texlab.build.args = [
+    "-pdf",
+    "-lualatex",
+    "-interaction=nonstopmode",
+    "-aux-directory=build",
+    "-output-directory=build",
+    "-synctex=1",
+    "%f",
+]
+config.texlab.forwardSearch.executable = "zathura"
+config.texlab.forwardSearch.args = ["--synctex-forward", "%l:1:%f", "%p"]
+config.texlab.chktex.onEdit = true
+config.texlab.chktex.onOpenAndSave = true
+config.texlab.latexindent.modifyLineBreaks = true
+config.texlab.bibtexFormatter = "texlab"
+
+[language-server.efm]
+command = "efm-langserver"
+
+[[language]]
+name = "lua"
+language-servers = [
+{ name = "lua-language-server", except-features=["format"] },
+{ name = "efm", only-features=["format", "diagnostics"] }
+]
+auto-format = true
+
+[language-server.lua-language-server]
+config.Lua.diagnostics.globals = ["vim"]
+config.Lua.hint.enable = true
+config.Lua.runtime.version = "LuaJIT"
+config.Lua.telemetry.enable = true
+config.Lua.workspace.checkThirdParty = false
+config.Lua.workspace.maxPreload = 1000
+config.Lua.workspace.preloadFileSize = 1000
+config.Lua.format.enable = false
+
+[[language]]
+name = "markdown"
+language-servers = ["efm"]
+
+[[language]]
+name = "json"
+language-servers = ["efm"]
+auto-format = true

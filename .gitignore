@@ -2,3 +2,4 @@ fish_variables
 viminfo
 .netrwhist
 vim/.vim/pack
+helix/.config/helix/runtime/
