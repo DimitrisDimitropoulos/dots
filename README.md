@@ -27,6 +27,93 @@ powerful and compact configuration syntax.
 
 To install clone the repo cd into it and run the command:
 
-```
+```sh
 stow <folder>
+```
+Make sure you do not try to install `LICENSE` or `README.md`.
+
+## Structure
+The structure of the repo in a tree like representation is as follows:
+```
+.
+├── .gitignore
+├── alacritty
+│  └── .config
+│     └── alacritty
+│        └── alacritty.toml
+├── bash
+│  └── .bashrc
+├── bspwm
+│  └── .config
+│     └── bspwm
+│        ├── bspwmrc
+│        └── stat.jpg
+├── fish
+│  └── .config
+│     └── fish
+│        ├── conf.d
+│        ├── config.fish
+│        └── functions
+│           ├── irg.fish
+│           ├── ll.fish
+│           └── mkcd.fish
+├── git
+│  └── .gitconfig
+├── helix
+│  └── .config
+│     └── helix
+│        ├── config.toml
+│        ├── languages.toml
+│        └── themes
+│           ├── melange-light.toml
+│           └── melange.toml
+├── kitty
+│  └── .config
+│     └── kitty
+│        ├── current-theme.conf
+│        └── kitty.conf
+├── lazygit
+│  └── .config
+│     └── lazygit
+│        └── config.yml
+├── LICENSE
+├── macchina
+│  └── .config
+│     └── macchina
+│        ├── macchina.toml
+│        └── themes
+│           └── Hydrogen.toml
+├── polybar
+│  └── .config
+│     └── polybar
+│        ├── config.ini
+│        └── launch.sh
+├── README.md
+├── structure.txt
+├── sxhkd
+│  └── .config
+│     └── sxhkd
+│        └── sxhkdrc
+├── tmux
+│  └── .tmux.conf
+├── vim
+│  └── .vim
+│     ├── spell
+│     │  ├── .greek.dic.swp
+│     │  ├── el.utf-8.add
+│     │  ├── el.utf-8.add.spl
+│     │  ├── el.utf-8.spl
+│     │  ├── el_GR.dic
+│     │  └── en_US.dic
+│     └── vimrc
+├── wezterm
+│  └── .config
+│     └── wezterm
+│        └── wezterm.lua
+├── zathura
+│  └── .config
+│     └── zathura
+│        └── zathurarc
+└── zsh
+   └── .zshrc
 ```
