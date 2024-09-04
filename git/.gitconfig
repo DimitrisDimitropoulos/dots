@@ -6,6 +6,7 @@
 	signingkey = 3CE5D49729AF16A4
 [core]
 	editor = nvim
+  pager = delta
 [init]
   defaultBranch = main
 [status]
@@ -21,3 +22,6 @@
 	helper = !/usr/bin/gh auth git-credential
 [commit]
 	gpgsign = true
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  dark = true
