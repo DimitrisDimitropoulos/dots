@@ -40,6 +40,7 @@ set -x XDG_DATA_HOME $HOME/.local/share
 set -x XDG_STATE_HOME $HOME/.local/state
 set -x XDG_PICTURES_DIR $HOME/Pictures
 set -x XDG_DOCUMENTS_DIR $HOME/Documents
+set -x GRIM_DEFAULT_DIR $XDG_PICTURES_DIR/Screenshots
 
 # Golang path
 set -x GOPATH $HOME/.go
