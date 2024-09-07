@@ -35,7 +35,7 @@ export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"
 ###Bob path
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 ###Deno path
-export DENO_INSTALL="/home/dimitris/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ### Editor variables
