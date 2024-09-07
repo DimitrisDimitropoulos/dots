@@ -54,6 +54,7 @@ export TERMINAL_PROG="st"
 export BROWSER="firefox"
 ### FZF variables
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+export GRIM_DEFAULT_DIR="$XDG_PICTURES_DIR/Screenshots"
 
 ### Set SHELL to fish
 if command -v fish &>/dev/null; then
