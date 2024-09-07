@@ -6,9 +6,8 @@ sxhkd &
 polybar &
 # requires the xorg-x11-xbitmaps package
 xsetroot -bitmap /usr/include/X11/bitmaps/mensetmanus -fg "#282c34" -bg "#d8dee9"
-setxkbmap -option ctrl:nocaps
-xcape -e 'Control_L=Escape'
-setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gr
+# xcape -e 'Control_L=Escape'
+setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll,caps:ctrl_modifier us,gr
 xsetroot -cursor_name crosshair &
 
 bspc subscribe monitor | while read -r line; do
