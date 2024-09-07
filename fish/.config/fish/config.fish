@@ -62,12 +62,11 @@ set -x PATH $DENO_INSTALL/bin $PATH
 if type -q nvim &>/dev/null
     set -x EDITOR nvim
     set -x VISUAL nvim
-    set -x SUDO_EDITOR nvim
 else
     set -x EDITOR vim
     set -x VISUAL vim
-    set -x SUDO_EDITOR vim
 end
+set -x SUDO_EDITOR vim
 
 set -x TERMINAL st
 set -x TERMINAL_PROG st
