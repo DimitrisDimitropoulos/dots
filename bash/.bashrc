@@ -48,8 +48,8 @@ else
 fi
 export SUDO_EDITOR="vim"
 ### Terminal
-export TERMINAL="st"
-export TERMINAL_PROG="st"
+export TERMINAL="kitty"
+export TERMINAL_PROG="kitty"
 ### Browser
 export BROWSER="firefox"
 ### FZF variables
