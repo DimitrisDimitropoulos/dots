@@ -9,15 +9,15 @@ structured manner.
 
 The dotfiles in this repository support the following shells:
 
-- Bash
-- Zsh
-- Fish
+-   Bash
+-   Zsh
+-   Fish
 
 ## Window Manager Configuration
 
 This repository also includes configuration for the
 [bspwm](https://github.com/baskerville/bspwm) window manager, a tiling window
-manager that represents windows as the leaves of a full binary tree. 
+manager that represents windows as the leaves of a full binary tree.
 
 Keybindings for bspwm are managed using
 [sxhkd](https://github.com/baskerville/sxhkd), a simple X hotkey daemon with a
@@ -30,10 +30,13 @@ To install clone the repo cd into it and run the command:
 ```sh
 stow <folder>
 ```
+
 Make sure you do not try to install `LICENSE` or `README.md`.
 
 ## Structure
+
 The structure of the repo in a tree like representation is as follows:
+
 ```
 .
 ├── .gitignore
@@ -117,3 +120,7 @@ The structure of the repo in a tree like representation is as follows:
 └── zsh
    └── .zshrc
 ```
+
+## LICENSE
+
+Most files are licensed under the LICENSE, except for files that state otherwise.

@@ -1,3 +1,9 @@
+# Melange
+# Author: Dimitris Dimitropoulos <dimitris.dimitropoulos00@gmail.com>
+# Author's github: <https://github.com/DimitrisDimitropoulos>
+# This theme is a port of the "melange-nvim" colorscheme https://github.com/savq/melange-nvim
+# This file is licensed under the MIT License.
+
 "ui.background" = { bg = "a_bg" }
 "ui.window" = { fg = "a_float" }
 "ui.text" = { fg = "a_fg" }
