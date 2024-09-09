@@ -3,3 +3,4 @@ viminfo
 .netrwhist
 vim/.vim/pack
 helix/.config/helix/runtime/
+newsboat/.config/newsboat/cache.db
