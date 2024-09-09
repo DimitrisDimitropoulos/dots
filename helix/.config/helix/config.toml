@@ -20,3 +20,6 @@ left = ["mode", "spinner",  "file-name","version-control",]
 
 [keys.normal]
 C-s = ":w"
+
+[keys.insert]
+  "C-[" = "normal_mode"
