@@ -1,0 +1,138 @@
+{
+  "layer": "bottom", // Waybar at top layer
+  "height": 34, // Waybar height (to be removed for auto height)
+  "modules-left": [
+    "custom/wlogout",
+    "sway/workspaces",
+    "network",
+    "tray",
+    "custom/weather",
+    "clock#1",
+    "clock#2"
+  ],
+  "modules-right": [
+    "sway/language",
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "disk",
+    "battery"
+  ],
+  "custom/wlogout": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "wlogout",
+  },
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 900,
+    "exec": "curl -s \"wttr.in/?format=%c%t:%w:%h\" | sed 's/C/C /g; s/ //g'"
+    // "exec": "curl -fs --max-time 15 \"https:\/\/v2.wttr.in/?format=%C:%t\""
+    // "exec": "curl -fs --max-time 15 \"https:\/\/wttr.in/?format=%C:%t:%w:%h\""
+  },
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "sway/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+      }
+    },
+  },
+  "sway/language": {
+    "format": "{short} {variant}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+  },
+  "clock#1": {
+    "format": "{:%a %m-%d} ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "month",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+        "months":     "<span color='#ffead3'><b>{}</b></span>",
+        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "clock#2": {
+    "interval": 1,
+    "format": "{:%H:%M:%S} 󱑏"
+  },
+  "tray": {
+    "icon-size": 30,
+    "spacing": 0
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "󰃞"]
+  },
+  "battery": {
+    "interval": 5,
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "nm-applet &"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pamixer --toggle-mute",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "disk": {
+    "interval": 30,
+    "format": "{percentage_used}% 󰋊"
+  }
+}

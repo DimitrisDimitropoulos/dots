@@ -1,0 +1,119 @@
+* {
+  font-size: 20px;
+  font-family: Iosevka Nerd Font;
+}
+
+window#waybar {
+  background: transparent;
+  color: #fdf6e3;
+}
+#custom-wlogout {
+  color: #ffffff;
+  background: #BC5C00;
+  border-radius: 50%;
+  padding: 0px 12px;
+  margin: 3px 10px;
+}
+#clock.2 {
+  color: #1e1f23;
+  background: #dcdccc;
+}
+#clock.1 {
+  background: #ffd68a;
+}
+#custom-weather {
+  background: #d888de;
+}
+#sway-language {
+  background: #d888de;
+}
+#pulseaudio {
+  background: #9aedfe;
+}
+#backlight {
+  background: #cf9bc2;
+}
+#memory {
+  background: #85b695;
+}
+#language {
+  background: #d4bfff;
+}
+#cpu {
+  background: #f1fa8c;
+}
+#battery {
+  background: white;
+}
+#battery.charging {
+  background: #b8bb26;
+}
+#battery.critical.charging {
+  background: #b8bb26;
+}
+#battery.warning.charging {
+  background: #b8bb26;
+}
+#battery.critical {
+  background: #ff5555;
+}
+#battery.warning {
+  background: #ffb86c;
+}
+window#waybar.battery-critical {
+  background: #ff5555;
+}
+#network {
+  background: #bd93f9;
+}
+#disk {
+  background: #a3a9ce;
+}
+#tray {
+  background: #bd8183;
+}
+
+#workspaces {
+  background-color: transparent;
+  border-radius: 0px;
+  /* margin-left: 10px; */
+}
+#workspaces button {
+  color: #ffffff;
+  background: #1e1f23;
+  /*If you need round border icons*/
+  border-radius: 26px;
+  padding: 0px 5px;
+  margin: 3px 0px;
+}
+#workspaces button.persistent {
+  color: #ffb86c;
+}
+#workspaces button.focused {
+  color: #ffffff;
+  background: #ffb86c;
+  border-radius: 4px;
+}
+#workspaces button.urgent {
+  color: #ff5555;
+}
+
+#custom-weather,
+#tray,
+#language,
+#pulseaudio,
+#backlight,
+#memory,
+#cpu,
+#battery,
+#network,
+#tray,
+#sway-language,
+#clock.1,
+#clock.2,
+#disk {
+  color: #1e1f23;
+  border-radius: 26px;
+  margin: 0 4px;
+  padding: 0 16px;
+}
