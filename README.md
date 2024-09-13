@@ -23,6 +23,10 @@ Keybindings for bspwm are managed using
 [sxhkd](https://github.com/baskerville/sxhkd), a simple X hotkey daemon with a
 powerful and compact configuration syntax.
 
+## Showcase
+
+![swappy-20240913-192851](https://github.com/user-attachments/assets/59b566b2-95df-46e7-9136-5df0bfa40a87)
+
 ## Installation
 
 To install clone the repo cd into it and run the command:
