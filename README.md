@@ -5,15 +5,9 @@ Stow](https://www.gnu.org/software/stow/), a free, portable, lightweight
 symlink farm manager. This allows the dotfiles to be organized in a clean and
 structured manner.
 
-## Supported Shells
-
-The dotfiles in this repository support the following shells:
-
--   Bash
--   Zsh
--   Fish
-
 ## Window Manager Configuration
+
+### X11
 
 This repository also includes configuration for the
 [bspwm](https://github.com/baskerville/bspwm) window manager, a tiling window
@@ -22,6 +16,22 @@ manager that represents windows as the leaves of a full binary tree.
 Keybindings for bspwm are managed using
 [sxhkd](https://github.com/baskerville/sxhkd), a simple X hotkey daemon with a
 powerful and compact configuration syntax.
+
+### Wayland
+
+On wayland [sway](https://swaywm.org/) is used, with
+[autotiling](https://github.com/nwg-piotr/autotiling) script.
+
+> [!IMPORTANT]
+> Please note that the tiling script for sway has it own License, please check
+> the repository for more info.
+
+## Helix
+
+In this repo there is a configuration for [helix](https://helix-editor.com/),
+with custom configuration for [texlab](https://github.com/latex-lsp/texlab) and
+[lua-ls](https://luals.github.io/), while leveraging
+[efm](https://github.com/mattn/efm-langserver) for linters and formatters.
 
 ## Showcase
 
@@ -36,94 +46,6 @@ stow <folder>
 ```
 
 Make sure you do not try to install `LICENSE` or `README.md`.
-
-## Structure
-
-The structure of the repo in a tree like representation is as follows:
-
-```
-.
-├── .gitignore
-├── alacritty
-│  └── .config
-│     └── alacritty
-│        └── alacritty.toml
-├── bash
-│  └── .bashrc
-├── bspwm
-│  └── .config
-│     └── bspwm
-│        ├── bspwmrc
-│        └── stat.jpg
-├── fish
-│  └── .config
-│     └── fish
-│        ├── conf.d
-│        ├── config.fish
-│        └── functions
-│           ├── irg.fish
-│           ├── ll.fish
-│           └── mkcd.fish
-├── git
-│  └── .gitconfig
-├── helix
-│  └── .config
-│     └── helix
-│        ├── config.toml
-│        ├── languages.toml
-│        └── themes
-│           ├── melange-light.toml
-│           └── melange.toml
-├── kitty
-│  └── .config
-│     └── kitty
-│        ├── current-theme.conf
-│        └── kitty.conf
-├── lazygit
-│  └── .config
-│     └── lazygit
-│        └── config.yml
-├── LICENSE
-├── macchina
-│  └── .config
-│     └── macchina
-│        ├── macchina.toml
-│        └── themes
-│           └── Hydrogen.toml
-├── polybar
-│  └── .config
-│     └── polybar
-│        ├── config.ini
-│        └── launch.sh
-├── README.md
-├── structure.txt
-├── sxhkd
-│  └── .config
-│     └── sxhkd
-│        └── sxhkdrc
-├── tmux
-│  └── .tmux.conf
-├── vim
-│  └── .vim
-│     ├── spell
-│     │  ├── .greek.dic.swp
-│     │  ├── el.utf-8.add
-│     │  ├── el.utf-8.add.spl
-│     │  ├── el.utf-8.spl
-│     │  ├── el_GR.dic
-│     │  └── en_US.dic
-│     └── vimrc
-├── wezterm
-│  └── .config
-│     └── wezterm
-│        └── wezterm.lua
-├── zathura
-│  └── .config
-│     └── zathura
-│        └── zathurarc
-└── zsh
-   └── .zshrc
-```
 
 ## LICENSE
 
