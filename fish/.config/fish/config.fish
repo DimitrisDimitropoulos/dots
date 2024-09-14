@@ -68,8 +68,8 @@ else
 end
 set -x SUDO_EDITOR vim
 
-set -x TERMINAL st
-set -x TERMINAL_PROG st
+set -x TERMINAL kitty
+set -x TERMINAL_PROG kitty
 set -x BROWSER firefox
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
 set -gx FZF_DEFAULT_OPTS '--min-height=30 --layout=reverse --cycle --info=inline --no-scrollbar
