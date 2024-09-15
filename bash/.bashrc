@@ -12,6 +12,8 @@ function git_branch_name() {
 PS1='\t \[\e[3;33m\]\w\[\e[0m\] \[\e[36m\]$(git_branch_name)\[\e[0m\] \n\[\e[1;35m\]λ:\[\e[0m\]'
 
 alias vi=nvim
+stty werase undef
+bind '\C-w:unix-filename-rubout'
 
 # XDG base directories.
 export XDG_CACHE_HOME="$HOME/.cache"
