@@ -28,6 +28,8 @@ export PATH="$HOME/.local/bin:$PATH"
 ###Cargo path
 export CARGO_HOME="$XDG_DATA_HOME"/cargo 
 export PATH="$CARGO_HOME"/bin:$PATH
+###Rustup path
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 ###Nodejs path
 export PATH="/bin/node:$PATH"
 ###Mason path
