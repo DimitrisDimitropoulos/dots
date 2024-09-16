@@ -51,6 +51,7 @@ set -x PATH $CARGO_HOME/bin $PATH
 set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 # Nodejs path
 set -x PATH /bin/node $PATH
+set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 # Mason path
 set -x PATH $HOME/.local/share/nvim/mason/bin/ $PATH
 # Bob path
