@@ -1,27 +1,28 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Dimitris Dimitropoulos
+  name = Dimitris Dimitropoulos
   username = DimitrisDimitropoulos
-	email = dimitris.dimitropoulos00@gmail.com
-	signingkey = 3CE5D49729AF16A4
+  email = dimitris.dimitropoulos00@gmail.com
+  signingkey = 3CE5D49729AF16A4
 [core]
-	editor = nvim
+  editor = nvim
   pager = delta
 [init]
   defaultBranch = main
 [status]
   short = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+  helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+  helper = !/usr/bin/gh auth git-credential
 [commit]
-	gpgsign = true
+  gpgsign = true
 [delta]
   navigate = true    # use n and N to move between diff sections
   dark = true
+
