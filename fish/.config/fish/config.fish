@@ -52,9 +52,6 @@ set -x PATH /bin/node $PATH
 set -x PATH $HOME/.local/share/nvim/mason/bin/ $PATH
 # Bob path
 set -x PATH $HOME/.local/share/bob/nvim-bin $PATH
-# Deno path
-set -x DENO_INSTALL $HOME/.deno
-set -x PATH $DENO_INSTALL/bin $PATH
 
 if type -q nvim &>/dev/null
     set -x EDITOR nvim
