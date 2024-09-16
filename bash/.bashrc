@@ -23,9 +23,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_DOCUMENTS_DIR="$HOME/Documents"
 export HISTFILE="$XDG_STATE_HOME/bash/.bash_history"
-###Golang path
-export GOPATH=$HOME/.go
-export PATH=$PATH:$(go env GOPATH)/bin
 ###Local bin path
 export PATH="$HOME/.local/bin:$PATH"
 ###Rustup path
