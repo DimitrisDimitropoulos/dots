@@ -25,8 +25,9 @@ export XDG_DOCUMENTS_DIR="$HOME/Documents"
 export HISTFILE="$XDG_STATE_HOME/bash/.bash_history"
 ###Local bin path
 export PATH="$HOME/.local/bin:$PATH"
-###Rustup path
-export PATH="$HOME/.cargo/bin:$PATH"
+###Cargo path
+export CARGO_HOME="$XDG_DATA_HOME"/cargo 
+export PATH="$CARGO_HOME"/bin:$PATH
 ###Nodejs path
 export PATH="/bin/node:$PATH"
 ###Mason path
