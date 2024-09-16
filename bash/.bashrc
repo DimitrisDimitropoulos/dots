@@ -37,6 +37,8 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"
 ###Bob path
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+###Dotnet path
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
 
 ### Editor variables
 if command -v nvim &>/dev/null; then
