@@ -47,6 +47,8 @@ set -x PATH $HOME/.local/bin $PATH
 # Cargo path
 set -x CARGO_HOME $XDG_DATA_HOME/cargo
 set -x PATH $CARGO_HOME/bin $PATH
+# Rustup path
+set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 # Nodejs path
 set -x PATH /bin/node $PATH
 # Mason path
