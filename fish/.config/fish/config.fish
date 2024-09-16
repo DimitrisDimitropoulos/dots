@@ -42,9 +42,6 @@ set -x XDG_PICTURES_DIR $HOME/Pictures
 set -x XDG_DOCUMENTS_DIR $HOME/Documents
 set -x GRIM_DEFAULT_DIR $XDG_PICTURES_DIR/Screenshots
 
-# Golang path
-set -x GOPATH $HOME/.go
-set -x PATH $PATH (go env GOPATH)/bin
 # Local bin path
 set -x PATH $HOME/.local/bin $PATH
 # Rustup path
