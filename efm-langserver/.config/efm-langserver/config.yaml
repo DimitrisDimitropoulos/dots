@@ -9,39 +9,38 @@ commands:
     title: config
 
 tools:
-
   stylua: &stylua
-    format-command: 'stylua --search-parent-directories --stdin-filepath ${INPUT} -'
+    format-command: "stylua --search-parent-directories --stdin-filepath ${INPUT} -"
     format-stdin: true
     root-markers:
       - stylua.toml
       - .stylua.toml
 
   selene: &selene
-    prefix: 'selene'
-    lint-source: 'selene'
+    prefix: "selene"
+    lint-source: "selene"
     lint-ignore-exit-code: true
     lint-stdin: true
-    lint-command: 'selene --display-style quiet -'
+    lint-command: "selene --display-style quiet -"
     lint-formats:
-      - '%f:%l:%c: %trror%m'
-      - '%f:%l:%c: %tarning%m'
-      - '%f:%l:%c: %tote%m'
+      - "%f:%l:%c: %trror%m"
+      - "%f:%l:%c: %tarning%m"
+      - "%f:%l:%c: %tote%m"
 
   luacheck: &luacheck
-    prefix: 'luacheck'
-    lint-source: 'luacheck'
+    prefix: "luacheck"
+    lint-source: "luacheck"
     lint-stdin: true
-    lint-command: 'luacheck --codes --no-color --quiet -'
+    lint-command: "luacheck --codes --no-color --quiet -"
     lint-ignore-exit-code: true
     lint-formats:
-      - '%.%#:%l:%c: (%t%n) %m'
+      - "%.%#:%l:%c: (%t%n) %m"
     root-markers:
-      - '.luacheckrc'
+      - ".luacheckrc"
 
   prettier: &prettier
     format-can-range: true
-    format-command: 'prettier --stdin --stdin-filepath ${INPUT} ${--range-start:charStart} ${--range-end:charEnd} ${--tab-width:tabSize} ${--use-tabs:!insertSpaces}'
+    format-command: "prettier --stdin --stdin-filepath ${INPUT} ${--range-start:charStart} ${--range-end:charEnd} ${--tab-width:tabSize} ${--use-tabs:!insertSpaces}"
     format-stdin: true
     root-markers:
       - .prettierrc
@@ -55,17 +54,17 @@ tools:
       - .prettierrc.toml
 
   jq_lint: &jq_lint
-    prefix: 'jq'
-    lint-source: 'jq'
-    lint-command: 'jq'
+    prefix: "jq"
+    lint-source: "jq"
+    lint-command: "jq"
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-offset: 1
     lint-formats:
-      - '%m at line %l, column %c'
+      - "%m at line %l, column %c"
 
   jq_format: &jq_format
-    format-command: 'jq'
+    format-command: "jq"
     format-stdin: true
 
 languages:
