@@ -44,8 +44,9 @@ set -x GRIM_DEFAULT_DIR $XDG_PICTURES_DIR/Screenshots
 
 # Local bin path
 set -x PATH $HOME/.local/bin $PATH
-# Rustup path
-set -x PATH $HOME/.cargo/bin $PATH
+# Cargo path
+set -x CARGO_HOME $XDG_DATA_HOME/cargo
+set -x PATH $CARGO_HOME/bin $PATH
 # Nodejs path
 set -x PATH /bin/node $PATH
 # Mason path
