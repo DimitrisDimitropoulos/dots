@@ -22,7 +22,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_DOCUMENTS_DIR="$HOME/Documents"
-export HISTFILE="$XDG_STATE_HOME/bash/.bash_history"
+export HISTFILE="$XDG_DATA_HOME/bash/.bash_history"
 ###Local bin path
 export PATH="$HOME/.local/bin:$PATH"
 ###Cargo path
