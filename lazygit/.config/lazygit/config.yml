@@ -5,3 +5,10 @@ git:
 
   commit:
     signOff: true
+gui:
+  showBottomLine: false
+  theme:
+    activeBorderColor:
+      - magenta
+      - bold
+  border: single
