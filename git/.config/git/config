@@ -25,6 +25,6 @@
     --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
     --abbrev-commit --
   reset-file = "!sh -c 'git status --short \
-    | fzf --no-sort \
     | cut -d \" \" -f3 \
+    | fzf --no-sort --preview \"git diff --color=always {}\" \
     | xargs git checkout ' -"
