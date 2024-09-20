@@ -1,2 +1,33 @@
 https://politepol.com/fd/PmQTiqMBes8L.xml "school" "~Mech"
-https://fedoramagazine.org/feed/
+
+https://dotfyle.com/this-week-in-neovim/rss.xml "tech"
+https://ypodomes.com/rss "news"
+https://www.naftemporiki.gr/rss "news"
+https://www.newsbeast.gr/financial/feed "news" "eco"
+https://www.news.gr/rss.ashx?catid=7 "news" "~News.gr - Ελλάδα"
+https://fedoramagazine.org/feed/ "tech"
+https://feeds.feedburner.com/iguru/news "tech"
+https://www.news.gr/rss.ashx?catid=9 "news" "eco" "~News.gr - Οικονομία"
+https://www.news.gr/rss.ashx?catid=5 "news" "~News.gr - Πολιτική"
+https://gr.euronews.com/rss?level=theme&name=europe "news"
+https://www.newsbeast.gr/politiki/feed "news"
+https://www.newsbeast.gr/technology/feed "tech"
+https://www.archlinux.org/feeds/news "tech"
+https://www.newsbeast.gr/geuseis/feed "cooking"
+
+https://github.com/DimitrisDimitropoulos/dots/commits.atom "git"
+https://github.com/DimitrisDimitropoulos/nvim/commits.atom "git"
+https://github.com/neovim/neovim/commits.atom "git"
+https://github.com/fast4x/RiMusic/releases.atom "git"
+https://github.com/Docile-Alligator/Infinity-For-Reddit/releases.atom "git"
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcS5zpN4RGV6KJmmy1mY1Ng "youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLXo7UDZvByw2ixzpQCufnA "youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg "youtube"
+
+https://planet.ellak.gr/atom.xml "tech" "ellak
+https://openhardware.ellak.gr/feed/ "tech" "ellak
+https://legal.ellak.gr/feed/ "tech" "ellak
+
+http://feeds.feedburner.com/ILoveTypography "typo"
