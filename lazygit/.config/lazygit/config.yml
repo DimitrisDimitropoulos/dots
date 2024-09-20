@@ -2,9 +2,6 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
-
-  commit:
-    signOff: true
 gui:
   showBottomLine: false
   theme:
