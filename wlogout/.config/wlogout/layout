@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock -f -c 000000 -i /usr/share/backgrounds/f38/default/f38-01-night.png",
+    "action" : "swaylock -f -c 000000 -i /usr/share/backgrounds/f40/default/f40-01-night.png",
     "text" : "Lock",
     "keybind" : "l"
 }
