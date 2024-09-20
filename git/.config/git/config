@@ -21,6 +21,10 @@
   navigate = true    # use n and N to move between diff sections
   dark = true
 [alias]
+  diff-select = "!git status --short \
+    | awk '{print $2}' \
+    | fzf --no-sort --preview 'git diff --color=always {}' \
+    | xargs git diff"
   lg = log --color --graph \
     --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
     --abbrev-commit --
