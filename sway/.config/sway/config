@@ -12,7 +12,6 @@ set $term kitty
 set $menu exec rofi -show drun
 
 exec_always .config/sway/autotiling
-exec wlr-randr --output eDP-1 --scale 1.00
 exec wl-clipboard
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
