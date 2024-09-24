@@ -21,6 +21,8 @@
   navigate = true    # use n and N to move between diff sections
   dark = true
 [alias]
+  grph = log --all --graph \
+    --pretty=format:'%C(auto)%h%C(reset) - %C(auto)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)'
   diff-select = "!git status --short \
     | awk '{print $2}' \
     | fzf --no-sort --preview 'git diff --color=always {}' \
