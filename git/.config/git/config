@@ -7,6 +7,12 @@
 [core]
   editor = nvim
   pager = delta
+[merge]
+  tool = vimdiff
+  conflictstyle = zdiff3
+  renamelimit = 20000
+[mergetool]
+  prompt = false
 [init]
   defaultBranch = main
 [status]
