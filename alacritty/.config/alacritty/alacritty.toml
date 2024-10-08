@@ -66,10 +66,10 @@ size = 20
 # family = "JetBrainsMono Nerd font"
 # family = "CaskaydiaCove Nerd Font"
 # family = "Terminus"
-# family = "Comic Code"
+family = "Comic Code"
 # family = "JuliaMono"
 # Φθηνό μπλε βράδυ στο γκάζι ξεψυχώ
-family = "FantasqueSansMNerdFont"
+# family = "FantasqueSansMNerdFont"
 # family = "FiraCode Nerd Font"
 style = "Regular"
 
