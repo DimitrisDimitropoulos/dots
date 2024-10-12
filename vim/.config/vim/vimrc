@@ -29,7 +29,7 @@ syntax spell toplevel
 colorscheme habamax
 nnoremap <C-s> :w<CR>
 nnoremap <leader>ff <cmd>FZF<CR>
-set viminfo+=n~/.vim/viminfo
+set viminfo+=n~/.config/vim/viminfo
 packadd! comment
 packadd! nohlsearch
 packadd! matchit
