@@ -12,7 +12,9 @@
   conflictstyle = zdiff3
   renamelimit = 20000
 [mergetool]
-  prompt = false
+[diff]
+	renames = copies
+	algorithm = patience
 [init]
   defaultBranch = main
 [status]
