@@ -25,6 +25,8 @@
   helper = !/usr/bin/gh auth git-credential
 [commit]
   gpgsign = true
+[push]
+  default = simple
 [delta]
   navigate = true    # use n and N to move between diff sections
   dark = true
