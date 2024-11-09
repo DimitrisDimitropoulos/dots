@@ -3,7 +3,7 @@
   name = Dimitris Dimitropoulos
   username = DimitrisDimitropoulos
   email = dimitris.dimitropoulos00@gmail.com
-  signingkey = 3CE5D49729AF16A4
+  signingkey = 9D0D92217423908A
 [core]
   editor = nvim
   pager = delta
