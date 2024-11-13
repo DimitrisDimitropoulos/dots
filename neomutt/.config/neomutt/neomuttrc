@@ -1,0 +1,125 @@
+source ./hidden.neomuttrc
+set charset = "utf-8"
+set spoolfile = "+INBOX"
+set record = "+INBOX.Sent"
+set trash = "+INBOX.Trash"
+set postponed = "+INBOX.Drafts"
+
+mailboxes =INBOX =INBOX.Sent =INBOX.Drafts =INBOX.Trash =INBOX.Junk =INBOX.sent-mail =INBOX.Archives.2024
+
+set use_threads = yes
+set sort = reverse-date
+set sidebar_visible = yes
+set sidebar_width = 20
+bind attach,browser,index       g   noop
+bind attach,browser,index       gg  first-entry
+bind attach,browser,index       G   last-entry
+bind pager                      g  noop
+bind pager                      gg  top
+bind pager                      G   bottom
+bind pager                      k   previous-line
+bind pager                      j   next-line
+macro index,pager \cb "<pipe-message> urlscan<Enter>"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>"
+
+color attachment  color109 color234
+color bold        color229 color234
+color error       color167 color234
+color hdrdefault  color246 color234
+color indicator   color223 color237
+color markers     color243 color234
+color normal      color223 color234
+color quoted      color250 color234
+color quoted1     color108 color234
+color quoted2     color250 color234
+color quoted3     color108 color234
+color quoted4     color250 color234
+color quoted5     color108 color234
+color search      color234 color208
+color signature   color108 color234
+color status      color234 color250
+color tilde       color243 color234
+color tree        color142 color234
+color underline   color223 color239
+
+color sidebar_divider    color250 color234
+color sidebar_new        color142 color234
+
+color index color142 color234 ~N
+color index color108 color234 ~O
+color index color109 color234 ~P
+color index color214 color234 ~F
+color index color175 color234 ~Q
+color index color167 color234 ~=
+color index color234 color223 ~T
+color index color234 color167 ~D
+
+color header color214 color234 "^(To:|From:)"
+color header color142 color234 "^Subject:"
+color header color108 color234 "^X-Spam-Status:"
+color header color108 color234 "^Received:"
+
+color body color142 color234 "[a-z]{3,255}://[[:graph:]]*"
+color body color142 color234 "([-[:alnum:]]+\\.)+([0-9]{1,3}|[-[:alpha:]]+)/[[:graph:]]*"
+color body color142 color234 "([-[:alnum:]]+\\.){2,255}[-[:alpha:]]{2,10}"
+
+# IPv4 and IPv6 stolen from https://stackoverflow.com/questions/53497/regular-expression-that-matches-valid-ipv6-addresses
+color body color142 color234 "((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])"
+color body color142 color234 "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))"
+
+# Mail addresses and mailto URLs
+color body color208 color234 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+color body color208 color234 "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+# some simleys and stuff
+color body color234 color214 "[;:]-*[)>(<lt;|]"
+color body color229 color234 "\\*[- A-Za-z]+\\*"
+
+color body color214 color234 "^-.*PGP.*-*"
+color body color142 color234 "^gpg: Good signature from"
+color body color167 color234 "^gpg: Can't.*$"
+color body color214 color234 "^gpg: WARNING:.*$"
+color body color167 color234 "^gpg: BAD signature from"
+color body color167 color234 "^gpg: Note: This key has expired!"
+color body color214 color234 "^gpg: There is no indication that the signature belongs to the owner."
+color body color214 color234 "^gpg: can't handle these multiple signatures"
+color body color214 color234 "^gpg: signature verification suppressed"
+color body color214 color234 "^gpg: invalid node with packet of type"
+
+color body color142 color234 "^Good signature from:"
+color body color167 color234 "^.?BAD.? signature from:"
+color body color142 color234 "^Verification successful"
+color body color167 color234 "^Verification [^s][^[:space:]]*$"
+
+color compose header            color223 color234
+color compose security_encrypt  color175 color234
+color compose security_sign     color109 color234
+color compose security_both     color142 color234
+color compose security_none     color208 color234
+
+color   body    brightwhite     default         ^[[:space:]].*
+color   body    yellow          default         ^(diff).*
+color   body    white           default         ^[\-\-\-].*
+color   body    white           default         ^[\+\+\+].*
+color   body    green           default         ^[\+].*
+color   body    red             default         ^[\-].*
+color   body    brightblue      default         [@@].*
+color   body    brightwhite     default         ^(\s).*
+color   body    cyan            default         ^(Signed-off-by).*
+color   body    cyan            default         ^(Docker-DCO-1.1-Signed-off-by).*
+color   body    brightwhite     default         ^(Cc)
+color   body    yellow          default         "^diff \-.*"
+color   body    brightwhite     default         "^index [a-f0-9].*"
+color   body    brightblue      default         "^---$"
+color   body    white           default         "^\-\-\- .*"
+color   body    white           default         "^[\+]{3} .*"
+color   body    green           default         "^[\+][^\+]+.*"
+color   body    red             default         "^\-[^\-]+.*"
+color   body    brightblue      default         "^@@ .*"
+color   body    green           default         "LGTM"
+color   body    brightmagenta   default         "-- Commit Summary --"
+color   body    brightmagenta   default         "-- File Changes --"
+color   body    brightmagenta   default         "-- Patch Links --"
+color   body    green           default         "^Merged #.*"
+color   body    red             default         "^Closed #.*"
+color   body    brightblue      default         "^Reply to this email.*"
