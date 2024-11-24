@@ -62,14 +62,14 @@ return {
 	},
 	keys = {
 		-- window
-		{ key = "m", mods = "CTRL|ALT", action = wezterm.action.Hide },
-		{ key = "f", mods = "CTRL|ALT", action = wezterm.action.ToggleFullScreen },
+		{ key = "m", mods = "CTRL|SHIFT", action = wezterm.action.Hide },
+		{ key = "f", mods = "CTRL|SHIFT", action = wezterm.action.ToggleFullScreen },
 		-- tab
-		{ key = "t", mods = "CTRL|ALT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
-		{ key = "w", mods = "CTRL|ALT", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
+		{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+		{ key = "w", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
 		{ key = "w", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
-		{ key = "j", mods = "CTRL|ALT", action = wezterm.action.ActivateTabRelative(-1) },
-		{ key = "k", mods = "CTRL|ALT", action = wezterm.action.ActivateTabRelative(1) },
+		{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
+		{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
 		{ key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
 		{ key = "2", mods = "ALT", action = wezterm.action.ActivateTab(1) },
 		{ key = "3", mods = "ALT", action = wezterm.action.ActivateTab(2) },
