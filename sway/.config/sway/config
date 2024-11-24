@@ -57,7 +57,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec foot --title Scratchpad; scratchpad show
 bindsym $mod+q kill
 bindsym $mod+w exec firefox
-bindsym $mod+c exec flatpak run com.visualstudio.code
+bindsym $mod+c exec code
 bindsym $mod+z exec foot
 bindsym $mod+Shift+p exec makoctl dismiss -a
 bindsym $mod+m exec grim -g "$(slurp -d)" $HOME/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%M-%S).png
