@@ -1,4 +1,5 @@
 let mapleader = " "
+set belloff=all
 set spelllang=el,en
 set spell
 set laststatus=2
@@ -24,23 +25,25 @@ set clipboard=unnamedplus
 set softtabstop=2
 set wildoptions=pum
 set completeopt+=menuone,popup,noselect,fuzzy
+set path+=**
 set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,ΡR,ΣS,ΤT,ΘU,ΩV,WW,ΧX,ΥY,ΖZ,αa,βb,ψc,δd,εe,φf,γg,ηh,ιi,ξj,κk,λl,μm,νn,οo,πp,qq,ρr,σs,τt,θu,ωv,ςw,χx,υy,ζz
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --color=never\ --glob\ \!.git
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
 
 set statusline=
 set statusline+=%{pathshorten(expand('%:p'))}
 set statusline+=%m
-set statusline+=\ %y
-set statusline+=%=
 set statusline+=\ [%{&ff}]
+set statusline+=%=
 set statusline+=\ [%{&fileencoding}]
-set statusline+=\ %l/%L
+set statusline+=\ %y
+set statusline+=\ l:%l/%L
+set statusline+=\ c:%c
 set statusline+=\ [%p%%]
-set statusline+=\ [%c]
 
-syntax spell toplevel
 colorscheme habamax
-nnoremap <C-s> :w<CR>
-nnoremap <leader>ff <cmd>FZF<CR>
 set viminfo+=n~/.config/vim/viminfo
 packadd! comment
 packadd! nohlsearch
