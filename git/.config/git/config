@@ -13,8 +13,11 @@
   renamelimit = 20000
 [mergetool]
 [diff]
+  tool = nvimdiff
 	renames = copies
 	algorithm = patience
+[difftool]
+  prompt = false
 [init]
   defaultBranch = main
 [status]
