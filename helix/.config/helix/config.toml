@@ -4,6 +4,7 @@ theme = "melange"
 line-number = "relative"
 mouse = false
 cursorline = false
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,6 +18,9 @@ display-signature-help-docs = true
 
 [editor.statusline]
 left = ["mode", "spinner",  "file-name","version-control",]
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
 
 [keys.normal]
 C-s = ":w"
