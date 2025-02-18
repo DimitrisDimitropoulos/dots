@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local leader = "CTRL|SHIFT"
+
 return {
 	window_padding = {
 		left = 0,
@@ -12,7 +14,7 @@ return {
 	enable_scroll_bar = false,
 	check_for_updates = false,
 	warn_about_missing_glyphs = false,
-	font_size = 16.0,
+	font_size = 19.0,
 	font = wezterm.font_with_fallback({
 		"Comic Code",
 	}),
@@ -60,33 +62,25 @@ return {
 			[17] = "#ff5d62",
 		},
 	},
+
 	keys = {
-		-- window
-		{ key = "m", mods = "CTRL|SHIFT", action = wezterm.action.Hide },
-		{ key = "f", mods = "CTRL|SHIFT", action = wezterm.action.ToggleFullScreen },
-		-- tab
-		{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
-		{ key = "w", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
-		{ key = "w", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
-		{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
-		{ key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
-		{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
-		{ key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
-		{ key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
-		{ key = "2", mods = "ALT", action = wezterm.action.ActivateTab(1) },
-		{ key = "3", mods = "ALT", action = wezterm.action.ActivateTab(2) },
-		{ key = "4", mods = "ALT", action = wezterm.action.ActivateTab(3) },
-		{ key = "5", mods = "ALT", action = wezterm.action.ActivateTab(4) },
-		{ key = "6", mods = "ALT", action = wezterm.action.ActivateTab(5) },
-		{ key = "7", mods = "ALT", action = wezterm.action.ActivateTab(6) },
-		{ key = "8", mods = "ALT", action = wezterm.action.ActivateTab(7) },
-		{ key = "9", mods = "ALT", action = wezterm.action.ActivateTab(8) },
-		{ key = "0", mods = "ALT", action = wezterm.action.ActivateTab(9) },
-		-- pane
-		{ key = "w", mods = "ALT", action = wezterm.action.CloseCurrentPane({ confirm = false }) },
-		{ key = "h", mods = "ALT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-		{ key = "v", mods = "ALT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
-		{ key = "s", mods = "ALT", action = wezterm.action.PaneSelect },
-		{ key = "f", mods = "ALT", action = wezterm.action.TogglePaneZoomState },
+		{ key = "m", mods = leader, action = wezterm.action.Hide },
+		{ key = "f", mods = leader, action = wezterm.action.ToggleFullScreen },
+		{ key = "t", mods = leader, action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+		{ key = "g", mods = leader, action = wezterm.action.CloseCurrentTab({ confirm = false }) },
+		{ key = "w", mods = leader, action = wezterm.action.DisableDefaultAssignment },
+		{ key = "LeftArrow", mods = leader, action = wezterm.action.ActivateTabRelative(-1) },
+		{ key = "RightArrow", mods = leader, action = wezterm.action.ActivateTabRelative(1) },
+		{ key = "w", mods = leader, action = wezterm.action.CloseCurrentPane({ confirm = false }) },
+		{
+			key = "Enter",
+			mods = leader,
+			action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+		},
+		{ key = "|", mods = leader, action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ key = "s", mods = leader, action = wezterm.action.PaneSelect },
+		{ key = "f", mods = leader, action = wezterm.action.TogglePaneZoomState },
+		{ key = "{", mods = leader, action = wezterm.action({ ActivatePaneDirection = "Next" }) },
+		{ key = "}", mods = leader, action = wezterm.action({ ActivatePaneDirection = "Prev" }) },
 	},
 }
