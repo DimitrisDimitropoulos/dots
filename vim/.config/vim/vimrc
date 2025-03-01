@@ -25,12 +25,16 @@ set clipboard=unnamedplus
 set softtabstop=2
 set wildoptions=pum
 set completeopt+=menuone,popup,noselect,fuzzy
+set diffopt=filler,internal,hiddenoff,algorithm:histogram,indent-heuristic,linematch:60,vertical
+set listchars+=extends:>,precedes:<
+set fillchars+=foldopen:,foldclose:
 set path+=**
 set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,ΡR,ΣS,ΤT,ΘU,ΩV,WW,ΧX,ΥY,ΖZ,αa,βb,ψc,δd,εe,φf,γg,ηh,ιi,ξj,κk,λl,μm,νn,οo,πp,qq,ρr,σs,τt,θu,ωv,ςw,χx,υy,ζz
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --color=never\ --glob\ \!.git
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
+
 
 set statusline=
 set statusline+=%{pathshorten(expand('%:p'))}
