@@ -35,6 +35,11 @@ if executable('rg')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
+if has('win32') && executable('pwsh.exe')
+  set shell=pwsh.exe
+  set shellxquote=
+  set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+endif
 
 set statusline=
 set statusline+=%{pathshorten(expand('%:p'))}
