@@ -20,13 +20,17 @@
 "ui.statusline.normal" = { bg = "b_blue", fg = "a_bg", modifiers = ["bold"] }
 "ui.statusline.insert" = { bg = "b_green", fg = "a_bg", modifiers = ["bold"] }
 "ui.statusline.select" = { bg = "b_magenta", fg = "a_bg", modifiers = ["bold"] }
-"ui.help" = { bg = "a_sel" }
-"ui.menu" = { bg = "a_sel" }
+"ui.help" = { fg = "a_fg", bg = "a_sel" }
+"ui.menu" = { fg = "a_fg", bg = "a_sel" }
 "ui.menu.selected" = { bg = "a_ui" }
 "ui.menu.scroll" = { fg = "a_ui" }
-"ui.popup" = { bg = "a_float" }
-"ui.popup.info" = { bg = "a_float" }
+"ui.popup" = { fg = "a_fg", bg = "a_float" }
+"ui.popup.info" = { fg = "a_fg", bg = "a_float" }
 "ui.virtual.inlay-hint" = { fg = "a_ui" }
+"ui.background.separator" = { fg = "a_fg" }
+"ui.picker.header" = { fg = "a_fg" }
+"ui.picker.header.column" = { fg = "a_com", modifiers = ["italic", "bold"] }
+"ui.picker.header.column.active" = { fg = "a_sel", bg = "b_magenta", modifiers = ["italic", "bold"] }
 
 "warning" = { fg = "b_yellow" }
 "error" = { fg = "b_red" }
