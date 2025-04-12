@@ -33,6 +33,18 @@ set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,�
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --color=never\ --glob\ \!.git
   set grepformat=%f:%l:%c:%m,%f:%l:%m
+  function! FindFunc(file_pattern, _)
+    " return systemlist('fd --color=never --type file --hidden --exclude=".git" "' .. a:file_pattern .. '"')
+    if has('win32')
+      let file_pattern = substitute(a:file_pattern, '\\', '\\\\', 'g')
+    endif
+    return systemlist(
+          \ 'rg --files --color=never --glob "!**/.git/*" --glob "!**/build/*" | rg --smart-case --color=never "'
+          \ .. a:file_pattern
+          \ .. '"'
+          \)
+  endfunction
+  set findfunc=FindFunc
 endif
 
 if has('win32') && executable('pwsh.exe')
