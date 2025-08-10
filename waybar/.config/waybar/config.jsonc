@@ -6,7 +6,7 @@
     "sway/workspaces",
     "network",
     "tray",
-    "custom/weather",
+    // "custom/weather",
     "clock#1",
     "clock#2"
   ],
