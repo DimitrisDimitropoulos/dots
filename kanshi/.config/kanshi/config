@@ -1,5 +1,30 @@
 profile {
-  output eDP-1 scale 1
-	output HDMI-A-1 scale 0.9
+  output eDP-1 {
+    scale 1
+    position 0,0
+  }
+	output HDMI-A-1 {
+    mode 1920x1080@120Hz
+    scale 1
+    position 1920,0
+    adaptive_sync on
+  }
+  exec swaymsg workspace 2, move workspace to HDMI-A-1
+  exec swaymsg workspace 1, move workspace to eDP-1
+}
+
+profile old {
+  output eDP-1 {
+    scale 1
+    position 0,0
+  }
+	output HDMI-A-1 {
+    mode 1920x1080@120Hz
+    scale 1.1
+    position 1920,0
+    adaptive_sync on
+  }
+  exec swaymsg workspace 2, move workspace to HDMI-A-1
+  exec swaymsg workspace 1, move workspace to eDP-1
 }
 
