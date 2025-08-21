@@ -16,10 +16,10 @@ exec wl-clipboard
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-# exec wlr-randr --output eDP-1 --scale 1.00
 exec_always kanshi
-output "*" bg /usr/share/backgrounds/f40/default/f40-01-day.png fill
-# exec swaybg -i /usr/share/backgrounds/f40/default/f40-01-day.png
+output "*" bg /usr/share/backgrounds/f42/default/f42-01-day.jxl fill
+# output "*" bg /usr/share/backgrounds/f40/default/f40-01-day.png fill
+
 
 # Idle configuration
 exec swayidle -w \
@@ -41,10 +41,10 @@ input "1267:12553:ELAN2204:00_04F3:3109_Touchpad" {
 }
 
 input * {
-  xkb_layout us,gr
-    xkb_variant nodeadkeys
-    xkb_options grp:alt_shift_toggle,caps:ctrl_modifier
+    xkb_layout us,gr
+    xkb_options grp:alt_shift_toggle,caps:ctrl_modifier,terminate:ctrl_alt_bksp
 }
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
