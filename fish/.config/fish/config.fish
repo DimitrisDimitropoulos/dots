@@ -58,6 +58,8 @@ set -x PATH $HOME/.local/share/nvim/mason/bin/ $PATH
 set -x PATH $HOME/.local/share/bob/nvim-bin $PATH
 # Dotnet
 set -x DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
+# Flatpaks
+set -x PATH /var/lib/flatpak/exports/bin $PATH
 
 if type -q nvim &>/dev/null
     set -x EDITOR nvim
