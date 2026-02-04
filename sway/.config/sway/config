@@ -9,7 +9,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-set $menu exec rofi -show drun
+# set $menu exec rofi -show drun
+set $menu exec fuzzel
 
 exec_always .config/sway/autotiling
 exec wl-clipboard
@@ -17,7 +18,7 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always kanshi
-output "*" bg /usr/share/backgrounds/f42/default/f42-01-day.jxl fill
+output "*" bg /usr/share/backgrounds/f43/default/f43-01-night.jxl fill
 # output "*" bg /usr/share/backgrounds/f40/default/f40-01-day.png fill
 
 
