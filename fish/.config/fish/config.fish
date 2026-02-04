@@ -64,11 +64,12 @@ set -x PATH /var/lib/flatpak/exports/bin $PATH
 if type -q nvim &>/dev/null
     set -x EDITOR nvim
     set -x VISUAL nvim
+    set -x SUDO_EDITOR $HOME/.local/share/bob/nvim-bin/nvim
 else
     set -x EDITOR vim
     set -x VISUAL vim
+    set -x SUDO_EDITOR vim
 end
-set -x SUDO_EDITOR vim
 
 set -x TERMINAL kitty
 set -x TERMINAL_PROG kitty
