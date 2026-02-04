@@ -16,7 +16,7 @@ exec_always .config/sway/autotiling
 exec wl-clipboard
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
-exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --systemd DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always kanshi
 output "*" bg /usr/share/backgrounds/f43/default/f43-01-night.jxl fill
 # output "*" bg /usr/share/backgrounds/f40/default/f40-01-day.png fill
