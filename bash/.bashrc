@@ -44,11 +44,12 @@ export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
 if command -v nvim &>/dev/null; then
 	export EDITOR="nvim"
 	export VISUAL="nvim"
+  export SUDO_EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
 else
 	export EDITOR="vim"
 	export VISUAL="vim"
+  export SUDO_EDITOR="vim"
 fi
-export SUDO_EDITOR="vim"
 ### Terminal
 export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
