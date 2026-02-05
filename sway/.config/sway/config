@@ -55,7 +55,7 @@ input * {
 #
 # Start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec foot --title Scratchpad; scratchpad show
+bindsym $mod+Shift+Return exec foot --app-id=floating_scratchpad
 bindsym $mod+q kill
 bindsym $mod+w exec firefox
 bindsym $mod+c exec code
@@ -66,7 +66,7 @@ bindsym $mod+Shift+m exec grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Alt+m exec grim $HOME/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%M-%S).png
 
 # Make sure scratchpad window is floating
-for_window [title="Scratchpad"] move scratchpad
+for_window [app_id="floating_scratchpad"] floating enable, move scratchpad, sticky enable, resize set 950 600, focus
 
 # Start your launcher
 bindsym Alt+space exec $menu
