@@ -1,13 +1,10 @@
-# Copy this to ~/.config/sway/config and edit it to your liking.
-
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
+
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+
 set $term kitty
 # set $menu exec rofi -show drun
 set $menu exec fuzzel
@@ -41,19 +38,14 @@ input "1267:12553:ELAN2204:00_04F3:3109_Touchpad" {
     tap_button_map lmr
 }
 
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
 input * {
     xkb_layout us,gr
     xkb_options grp:alt_shift_toggle,caps:ctrl_modifier,terminate:ctrl_alt_bksp
 }
 
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
 ### Key bindings
-#
-# Basics:
-#
-# Start a terminal
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec foot --app-id=floating_scratchpad
 bindsym $mod+q kill
@@ -82,7 +74,9 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 
 # Exit sway (logs you out of your Wayland session)
-#bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit
+#shortcut. Do you really want to exit sway? This will end your Wayland session.'
+#-B 'Yes, exit sway' 'swaymsg exit'
 bindsym $mod+Shift+e exec sway exit
 
 bindsym $mod+tab workspace next_on_output
@@ -113,9 +107,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-#
+
 # Workspaces:
-#
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -138,6 +131,7 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
+
 # Note: workspaces can have any name you want, not just numbers.
 # We just use 1-10 as the default.
 
@@ -171,21 +165,15 @@ bindsym $mod+space focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
 
+# Scratchpad:
 # Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
-
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
-#
+
 # Resizing containers:
-#
 mode "resize" {
     bindsym $left resize shrink width 10px
     bindsym $up resize grow height 10px
@@ -214,6 +202,8 @@ default_floating_border pixel 3
 bar {
   swaybar_command waybar
 }
+
+# Media keys
 bindsym XF86Eject exec eject -T
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
