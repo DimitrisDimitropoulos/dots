@@ -10,7 +10,6 @@ set $term kitty
 set $menu exec fuzzel
 
 exec_always .config/sway/autotiling
-exec wl-clipboard
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dbus-update-activation-environment --systemd DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
@@ -62,6 +61,9 @@ for_window [app_id="floating_scratchpad"] floating enable, move scratchpad, stic
 
 # Start your launcher
 bindsym Alt+space exec $menu
+
+# Clipboard history
+bindsym $mod+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -147,7 +149,7 @@ bindsym $mod+Control+Shift+K move workspace to output up
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
 bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+d splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
