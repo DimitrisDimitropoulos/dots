@@ -59,6 +59,9 @@ bindsym $mod+Alt+m exec grim $HOME/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%M-%
 # Make sure scratchpad window is floating
 for_window [app_id="floating_scratchpad"] floating enable, move scratchpad, sticky enable, resize set 950 600, focus
 
+# Assign Apps to specific workspaces
+assign [app_id="org.mozilla.firefox"] workspace number 2
+
 # Start your launcher
 bindsym Alt+space exec $menu
 
