@@ -90,6 +90,12 @@ bindsym $mod+Shift+tab workspace prev_on_output
 bindsym Alt+tab focus next
 bindsym Alt+Shift+tab focus prev
 
+# Focus the monitor to the left, right, up, or down
+bindsym $mod+Alt+h focus output left
+bindsym $mod+Alt+l focus output right
+bindsym $mod+Alt+k focus output up
+bindsym $mod+Alt+j focus output down
+
 # Moving around:
 # Move your focus around
 bindsym $mod+$left focus left
