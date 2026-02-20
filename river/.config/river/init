@@ -216,64 +216,6 @@ riverctl map normal $mod Comma focus-output previous
 riverctl map normal $mod+Shift Period send-to-output next
 riverctl map normal $mod+Shift Comma send-to-output previous
 
-#  ███████████              ████
-# ░░███░░░░░███            ░░███
-#  ░███    ░███  █████ ████ ░███   ██████   █████
-#  ░██████████  ░░███ ░███  ░███  ███░░███ ███░░
-#  ░███░░░░░███  ░███ ░███  ░███ ░███████ ░░█████
-#  ░███    ░███  ░███ ░███  ░███ ░███░░░   ░░░░███
-#  █████   █████ ░░████████ █████░░██████  ██████
-# ░░░░░   ░░░░░   ░░░░░░░░ ░░░░░  ░░░░░░  ░░░░░░
-
-# Make all views with app-id "bar" and any title use client-side decorations
-riverctl rule-add ssd
-
-# riverctl rule-add -app-id "floorp" tags $((1 << (1 - 1)))
-# riverctl rule-add -app-id "firefox" tags $((1 << (1 - 1)))
-# riverctl rule-add -app-id "Code" tags $((1 << (2 - 1)))
-# riverctl rule-add -app-id "special-go" tags $((1 << (2 - 1)))
-# riverctl rule-add -app-id "dev.zed.Zed" tags $((1 << (2 - 1)))
-# riverctl rule-add -app-id "org.gnome.Nautilus" tags $((1 << (3 - 1)))
-# riverctl rule-add -app-id "Thunar" tags $((1 << (3 - 1)))
-# riverctl rule-add -app-id "org.libretro.RetroArch" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "Celeste.bin.x86_64" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "hollow_knight.x86_64" tags $((1 << (4 - 1)))
-# riverctl rule-add -title "Brawlhalla" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "citra-qt" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "es-de" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "steam" tags $((1 << (4 - 1)))
-# riverctl rule-add -app-id "Ferdium" tags $((1 << (5 - 1)))
-# riverctl rule-add -app-id "Webcord" tags $((1 << (6 - 1)))
-# riverctl rule-add -app-id "obsidian" tags $((1 << (7 - 1)))
-# riverctl rule-add -title "Brawlhalla" fullscreen
-# riverctl rule-add -app-id "org.pwmt.zathura" fullscreen
-# riverctl rule-add -app-id "mpv" fullscreen
-# riverctl rule-add -app-id "feh" fullscreen
-# riverctl rule-add -app-id "org.libretro.RetroArch" fullscreen
-# riverctl rule-add -app-id "es-de" fullscreen
-# riverctl rule-add -title "Special Offers" float # Steam
-# riverctl rule-add -title "Friends List" float   # Steam
-# riverctl rule-add -title "Steam Settings" float # Steam
-# riverctl rule-add -app-id "steam" -title "Brawlhalla" float
-# riverctl rule-add -app-id "galculator" float
-# riverctl rule-add -app-id "org.kde.kcalc" float
-# riverctl rule-add -app-id "blueman-manager" float
-# riverctl rule-add -app-id "org.kde.kdeconnect.app" float
-# riverctl rule-add -app-id "nm-connection-editor" float
-# riverctl rule-add -app-id "org.kde.polkit-kde-authentication-agent-1" float
-# riverctl rule-add -app-id "polkit-gnome-authentication-agent-1" float
-# riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
-# riverctl rule-add -app-id 'GParted' float
-# riverctl rule-add -app-id 'nwg-look' float
-# riverctl rule-add -app-id 'firefox' -title 'Picture-in-Picture' float
-# riverctl rule-add -app-id 'floorp' -title 'Picture-in-Picture' float
-# riverctl rule-add -title 'gtk*' float
-# riverctl rule-add -app-id 'xdg-desktop-portal-gtk' float
-# riverctl rule-add -app-id float float
-# riverctl rule-add -title "popup title with spaces" float
-# riverctl rule-add -title "zoom" float
-# riverctl rule-add -title "Picture-in-Picture" float
-
 # Set background and border color
 riverctl background-color 0x002B36
 riverctl border-width 2
