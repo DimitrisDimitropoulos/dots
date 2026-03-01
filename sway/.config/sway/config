@@ -9,7 +9,7 @@ set $term kitty
 # set $menu exec rofi -show drun
 set $menu exec fuzzel
 
-exec_always .config/sway/autotiling
+exec persway daemon --default-layout spiral
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dbus-update-activation-environment --systemd DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
