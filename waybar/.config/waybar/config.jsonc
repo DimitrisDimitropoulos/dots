@@ -103,7 +103,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon} {capacity}% ({power:.1f}W)",
+    "format-charging": "󱐋 {capacity}% ({power:.1f}W)",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""]
   },
   "network": {
