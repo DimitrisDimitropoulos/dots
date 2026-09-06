@@ -13,6 +13,7 @@ exec persway daemon --default-layout spiral
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dbus-update-activation-environment --systemd DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec swaync
 exec_always kanshi
 exec swaybg -i /usr/share/backgrounds/f43/default/f43-01-day.jxl -m fill
 # output "*" bg /usr/share/backgrounds/f40/default/f40-01-day.png fill
@@ -53,7 +54,7 @@ bindsym $mod+q kill
 bindsym $mod+w exec firefox
 bindsym $mod+c exec code
 bindsym $mod+z exec foot
-bindsym $mod+Shift+p exec makoctl dismiss -a
+bindsym $mod+Shift+p exec swaync-client -t -sw
 bindsym $mod+m exec grim -g "$(slurp -d)" $HOME/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%M-%S).png
 bindsym $mod+Shift+m exec grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Alt+m exec grim $HOME/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%M-%S).png
