@@ -42,6 +42,13 @@ window#waybar {
 #cpu {
   background: #f1fa8c;
 }
+#temperature {
+  background: #f1fa8c;
+}
+#temperature.critical {
+    background-color: #f38ba8; /* turns red when critical-threshold is hit */
+    color: #11111b;
+}
 #battery {
   background: white;
 }
@@ -105,6 +112,7 @@ window#waybar.battery-critical {
 #backlight,
 #memory,
 #cpu,
+#temperature,
 #battery,
 #network,
 #tray,

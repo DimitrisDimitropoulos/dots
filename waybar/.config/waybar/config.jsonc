@@ -15,6 +15,7 @@
     "sway/language",
     "pulseaudio",
     "backlight",
+    "temperature",
     "cpu",
     "memory",
     "disk",
@@ -125,10 +126,6 @@
     "signal": 8,
     "tooltip": false
   },
-  "tooltip": true,
-  "tooltip-format-activated": "Idle inhibitor active",
-  "tooltip-format-deactivated": "Idle inhibitor inactive"
-  },
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon} ",
@@ -148,6 +145,13 @@
     "scroll-step": 1,
     "on-click": "pamixer --toggle-mute",
     "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
   },
   "disk": {
     "interval": 30,
