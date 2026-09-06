@@ -3,6 +3,7 @@
   "height": 34, // Waybar height (to be removed for auto height)
   "modules-left": [
     "custom/wlogout",
+    "custom/swayidle",
     "sway/workspaces",
     "network",
     "tray",
@@ -116,6 +117,17 @@
     "format-disconnected": "Disconnected ⚠",
     "interval": 3,
     "on-click": "nm-applet &"
+  },
+  "custom/swayidle": {
+    "format": "{}",
+    "interval": 3,
+    "exec": "ps -o stat= -C swayidle 2>/dev/null | grep -q T && echo '󰈉' || (pgrep -x swayidle >/dev/null && echo '󰈈 ' || echo '󰈉 ')",
+    "signal": 8,
+    "tooltip": false
+  },
+  "tooltip": true,
+  "tooltip-format-activated": "Idle inhibitor active",
+  "tooltip-format-deactivated": "Idle inhibitor inactive"
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",

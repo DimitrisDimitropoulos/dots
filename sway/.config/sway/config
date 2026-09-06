@@ -47,6 +47,8 @@ input * {
 ### Key bindings
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec foot --app-id=floating_scratchpad
+# Toggle swayidle on/off
+bindsym $mod+Shift+i exec ~/.config/sway/toggle-idle.sh
 bindsym $mod+q kill
 bindsym $mod+w exec firefox
 bindsym $mod+c exec code
