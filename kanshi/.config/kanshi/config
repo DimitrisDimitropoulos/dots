@@ -2,6 +2,7 @@ profile {
   output eDP-1 {
     scale 1
     position 0,0
+    adaptive_sync on
   }
 	output HDMI-A-1 {
     mode 1920x1080@120Hz
@@ -11,6 +12,7 @@ profile {
   }
   exec swaymsg workspace 2, move workspace to HDMI-A-1
   exec swaymsg workspace 1, move workspace to eDP-1
+  exec pkill swaybg; swaybg -o eDP-1 -i /usr/share/backgrounds/f42/default/f42-01-night.jxl -m fill -o HDMI-A-1 -i /usr/share/backgrounds/f43/default/f43-01-night.jxl -m fill
 }
 
 profile old {
