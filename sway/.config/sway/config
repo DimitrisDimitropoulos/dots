@@ -64,6 +64,8 @@ for_window [app_id="floating_scratchpad"] floating enable, move scratchpad, stic
 
 # Assign Apps to specific workspaces
 assign [app_id="org.mozilla.firefox"] workspace number 2
+assign [app_id="org.gnome.Evince"] workspace number 3
+assign [app_id="org.pwmt.zathura"] workspace number 3
 
 # Start your launcher
 bindsym Alt+space exec $menu
